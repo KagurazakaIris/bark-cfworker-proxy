@@ -1,0 +1,6 @@
+name = "bark-cfworker-proxy"
+main = "server.js"
+compatibility_date = "2026-01-31"
+
+[vars]
+UPSTREAM_BASE = "https://api.day.app"

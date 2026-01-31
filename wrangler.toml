@@ -4,3 +4,8 @@ compatibility_date = "2026-01-31"
 
 [vars]
 UPSTREAM_BASE = "https://api.day.app"
+
+[observability]
+[observability.logs]
+enabled = false
+invocation_logs = false

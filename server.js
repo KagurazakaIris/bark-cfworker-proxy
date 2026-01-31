@@ -29,6 +29,19 @@ export default {
     }
 
     const inUrl = new URL(request.url);
+
+    // Root path redirect to GitHub repo
+    const ua = request.headers.get("user-agent") || "";
+    if (
+      (inUrl.pathname === "/" || inUrl.pathname === "") &&
+      ua.includes("Mozilla/5.0")
+    ) {
+      return Response.redirect(
+        "https://github.com/KagurazakaIris/bark-cfworker-proxy",
+        302
+      );
+    }
+
     const baseUrl = new URL(upstreamBase);
 
     // Build upstream URL: base + incoming path + incoming query

@@ -9,3 +9,7 @@ UPSTREAM_BASE = "https://api.day.app"
 [observability.logs]
 enabled = false
 invocation_logs = false
+
+[[routes]]
+pattern = "bark-cfw-proxy.kagurazakairis.xyz"
+custom_domain = true
